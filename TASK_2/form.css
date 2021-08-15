@@ -1,0 +1,94 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  body{
+    padding: 20px 15%;
+    background-image: url('https://images.wallpapersden.com/image/download/iceberg-minimalist_a2pnaGmUmZqaraWkpJRmbmdlrWZlbWU.jpg');
+    background-size: cover;
+    transition: 0.5s;
+  }
+  form {
+    padding: 50px 10%;
+    background-color: white;
+    margin: auto auto; 
+    border-radius: 10px;
+  }
+  form header {
+    margin: 20px auto; 
+    text-align: center;
+  }
+  form header div {
+    font-size: 90%;
+    color: #999;
+  }
+  form header h2 {
+    margin: 0 0 5px 0;
+  }
+  form > div {
+    clear: both;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 0 10px 0;
+  }
+  form > div > fieldset > div > div {
+    margin: 0 0 5px 0;
+  }
+  form > div > label,
+  legend {
+      width: 25%;
+    float: left;
+    padding-right: 10px;
+    font-weight: 600;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 75%;
+    float: right;
+  }
+  form > div > fieldset label {
+      font-size: 90%;
+  }
+  fieldset {
+      border: 0;
+    padding: 0;
+  }
+  input[type=numbers],
+  input[type=text],
+  input[type=email],
+  select{
+      width: 60%;
+      height: 30px;
+  }
+  #submit{
+      margin-left: 45%;
+  }
+  @media (max-width: 600px) {
+    input[type=numbers],
+    input[type=text],
+    input[type=email]{
+        width: 100%;
+        height: 30px;
+    }
+    form > div {
+      margin: 0 0 15px 0; 
+    }
+    form > div > label,
+    legend {
+        width: 100%;
+      margin: 0 0 5px 0;
+    }
+    form > div > div,
+    form > div > fieldset > div {
+      width: 100%;
+      float: none;
+    }
+  }
+  @media (min-width: 1200px) {
+    form > div > label,
+      legend {
+        text-align: right;
+    }
+  }

@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>
+            Survey
+        </title>
+        <link rel="stylesheet" href="form.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script>
+            let i =0;
+            let images = ["https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg","https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/non-4k/original/23.jpg","https://images.wallpapersden.com/image/download/iceberg-minimalist_a2pnaGmUmZqaraWkpJRmbmdlrWZlbWU.jpg"]
+            setInterval(function(){
+                if(i==3)
+                i=0;
+                document.getElementById('the_body').setAttribute("style", "background-image: url("+images[i]+");background-repeat: no-repeat;");
+                i++;               
+            }, 3500);
+            function validateForm() {
+                let x = document.forms["myForm"]["name"].value;
+                let y = document.forms["myForm"]["email"].value;
+                let z = document.forms["myForm"]["msg"].value;
+                let w = document.forms["myForm"]["degree"].value;
+                if (x == "" || y=="" || z=="" || w == "nil") {
+                    alert("Fill out blank fields");
+                    return false;
+          }
+        }
+            </script>
+    </head>
+    <body id="the_body">
+        <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+            <header>
+              <h2>SANTHAKUMAR A</h2>
+              <div>SURVEY FORM - TASK 2</div>
+            </header>
+                <div>
+                  <label class="desc" id="title1" for="Field1">Full Name</label>
+                  <div>
+                    <input id="Field1" name="name" type="text" class="field text fn" value="" size="8" tabindex="1">
+                  </div>
+                </div>
+                  
+                <div>
+                  <label class="desc" id="title3" for="Field3">
+                    Email
+                  </label>
+                  <div>
+                    <input id="Field3" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+                 </div>
+                </div>
+                  
+                <div>
+                  <label class="desc" id="title4" for="Field4">
+                    Message
+                  </label>
+                
+                  <div>
+                    <textarea id="Field4" name="msg" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+                  </div>
+                </div>
+                  
+                <div>
+                  <fieldset>
+                  
+                    <legend id="title5" class="desc">
+                      Gender
+                    </legend>
+                    
+                    <div>
+                        <input id="radioDefault_5" name="gender" type="hidden" value="">
+                        <div>
+                            <input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5" checked="checked">
+                            <label class="choice" for="Field5_0">Male</label>
+                        </div>
+                      <div>
+                          <input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
+                          <label class="choice" for="Field5_1">Female</label>
+                      </div>
+                      <div>
+                          <input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
+                          <label class="choice" for="Field5_2">Prefer not to say</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                
+                <div>
+                  <fieldset>
+                    <legend id="title6" class="desc">
+                      Area of Interest
+                    </legend>
+                    <div>
+                    <div>
+                        <input id="Field6" name="Field6" type="checkbox" value="First Choice" tabindex="8">
+                        <label class="choice" for="Field6">Web Dev</label>
+                    </div>
+                    <div>
+                        <input id="Field7" name="Field7" type="checkbox" value="Second Choice" tabindex="9">
+                        <label class="choice" for="Field7">Android App dev</label>
+                    </div>
+                    <div>
+                        <input id="Field8" name="Field8" type="checkbox" value="Third Choice" tabindex="10">
+                        <label class="choice" for="Field8">Networking</label>
+                    </span>
+                    </div>
+                  </fieldset>
+                </div>
+                
+                <div>
+                  <label class="desc" id="title106" for="Field106">
+                      Degree
+                  </label>
+                  <div>
+                  <select id="Field106" name="degree" class="field select medium" tabindex="11"> 
+                    <option value="nil">-Select-</option>
+                    <option value="First Choice">BE</option>
+                    <option value="Second Choice">Btech</option>
+                    <option value="Third Choice">BSC</option>
+                  </select>
+                  </div>
+                </div>
+                <input id="submit" type="submit" value="Submit">
+              </form>
+              
+    
+
+    </body>
+</html>
